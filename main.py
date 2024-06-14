@@ -42,7 +42,8 @@ def index():
             <title>Haruya'HomePage HTML in here</title>
         </head>
         <body>
-            <h1>Look! HalloWorld!</h1>
+            <h1>Look! HelloWorld!</h1>
+            <p>私はマグロが好きです</p>
         </body>
     </html>
     """
