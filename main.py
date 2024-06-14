@@ -2,6 +2,8 @@ from typing import Optional
 
 from fastapi import FastAPI
 
+from fastapi.responses import HTMLResponse #インポート
+
 import random  # randomライブラリを追加
 
 app = FastAPI()
