@@ -32,17 +32,17 @@ def omikuji():
         "大凶"
     ]
 
-    return omikuji_list[random.randrange(10)]
+    return {"result" : omikuji_list[random.randrange(10)]}
 
 @app.get("/index")
 def index():
     html_content = """
     <html>
         <head>
-            <title>Some HTML in here</title>
+            <title>Haruya'HomePage HTML in here</title>
         </head>
         <body>
-            <h1>Look ma! HTML!</h1>
+            <h1>Look! HalloWorld!</h1>
         </body>
     </html>
     """
