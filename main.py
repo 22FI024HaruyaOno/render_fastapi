@@ -52,3 +52,37 @@ def index():
 @app.post("/present")
 async def new_naming(present):
     return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}
+
+@app.post("/hand")
+async def janken(hand):
+    com = random.randrange(3) + 1
+    comhand = ""
+    if(com == 1):
+        comhand = "グー"
+    elif(com == 2):
+        comhand = "チョキ"
+    else:
+        comhand = "パー"
+    message = ""
+    if(com == 1):
+        if({hand} == "グー"):
+            message = "あいこです"
+        elif({hand} == "チョキ"):
+            message = "あなたの負け"
+        elif({hand} == "パー"):
+            message = "あなたの勝ち"
+    elif(com == 2): 
+        if({hand} == "グー"):
+            message = "あなたの勝ち"
+        elif({hand} == "チョキ"):
+            message = "あいこです"
+        elif({hand} == "パー"):
+            message = "あなたの負け"
+    elif(com == 3):
+        if({hand} == "グー"):
+            message = "あなたの負け"
+        elif({hand} == "チョキ"):
+            message = "あなたの勝ち"
+        elif({hand} == "パー"):
+            message = "あいこです"
+    return {"response": f"じゃんけんポン！ 私は{comhand}、{message}"}
